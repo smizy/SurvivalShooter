@@ -671,6 +671,7 @@ GameObject:
   - 82: {fileID: 192695853}
   - 195: {fileID: 192695852}
   - 114: {fileID: 192695859}
+  - 114: {fileID: 192695860}
   m_Layer: 9
   m_Name: Zombunny
   m_TagString: Untagged
@@ -837,6 +838,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &192695860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 192695851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15099f5ee559584089d5851df572def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: .5
+  attackDamage: 10
 --- !u!1 &201134821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1998,7 @@ GameObject:
   - 136: {fileID: 904813412}
   - 82: {fileID: 904813411}
   - 114: {fileID: 904813410}
+  - 114: {fileID: 904813416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2124,6 +2139,24 @@ Transform:
   - {fileID: 571515824}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &904813416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904813409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 1650522286}
+  damageImage: {fileID: 1538243942}
+  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  flashSpeed: 5
+  flashColour: {r: .808823526, g: .0535250902, b: .0535250902, a: .101960786}
 --- !u!1 &907887675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,9 +3663,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
